@@ -17,8 +17,6 @@ runs:
       with:
         script: |
           var whoToGreet = core.getInput('who-to-greet')
-          var token = core.getInput('token')
-          const github = new Github(token)
           core.notice(`Hello ${whoToGreet}`)
           core.setOutput('answer', 42)
           if (context.eventName === 'issues') {
@@ -29,4 +27,4 @@ runs:
               body: '💥Thanks for reporting!'
             })
           }
-        token: ${{ inputs.token }}
+        github-token: ${{ secrets.GH_PAT }}
