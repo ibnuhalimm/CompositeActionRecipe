@@ -5,6 +5,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  token:
+    description: 'Github PAT'
+    required: true
+    default: 'github_pat_xxx'
 outputs:
   answer:
     description: 'Answer to life, the universe, and everything'
