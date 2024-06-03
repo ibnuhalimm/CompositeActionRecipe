@@ -14,5 +14,6 @@ jobs:
         uses: ./
         with:
           who-to-greet: '@Ibnu'
+          token: ${{ secrets.GH_PAT }}
       - name: Output the answer
         run: echo "The answer is ${{ steps.my-action.outputs.answer }}"
